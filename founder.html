@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder — Aiman El-Ramly</title>
+<meta name="description" content="Aiman El-Ramly: entrepreneur, strategist, and builder of enterprises. Three decades at the intersection of strategy, innovation, and execution.">
+<link rel="icon" href="assets/img/mSYJJRJfcrDdwMvTZkXiZgUXf0.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .page-hero.founder { background-image:url('assets/img/MDYnMFdFvx6uWT5VkDOBeDt3EY.png'); min-height:75vh; }
+  .page-hero.founder::before { background:linear-gradient(120deg, rgba(3,108,159,0.4) 0%, rgba(232,112,74,0.45) 100%); }
+  .founder-bio {
+    background:#fff; padding:120px 0;
+  }
+  .bio-grid {
+    display:grid; grid-template-columns:1fr 1.3fr; gap:80px; align-items:start;
+  }
+  .bio-credentials {
+    background:linear-gradient(160deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
+    color:#fff; border-radius:20px; padding:48px;
+    box-shadow:0 20px 48px rgba(3,108,159,0.25);
+  }
+  .bio-credentials h3 {
+    font-size:22px; font-weight:700; margin-bottom:22px;
+    padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,0.25);
+  }
+  .bio-credentials ul { list-style:none; display:flex; flex-direction:column; gap:16px; }
+  .bio-credentials li {
+    padding-left:26px; position:relative;
+    font-size:15px; line-height:1.55;
+  }
+  .bio-credentials li::before {
+    content:''; position:absolute; left:0; top:9px; width:8px; height:8px;
+    border-radius:50%; background:#C8F8A9;
+  }
+  .bio-credentials li strong { font-weight:700; display:block; margin-bottom:2px; }
+
+  .historical {
+    background-image:linear-gradient(180deg, rgba(15,97,143,0.78), rgba(3,108,159,0.9)),
+                     url('assets/img/8pvU3bjJtNPO0gStIHdiVJFgjy4.png');
+    background-size:cover; background-position:center;
+    padding:120px 0; color:#fff;
+  }
+  .historical h2 { font-size:clamp(36px, 4vw, 60px); font-weight:800; text-align:center; margin-bottom:30px; }
+  .historical p.lead { text-align:center; color:rgba(255,255,255,0.9); max-width:820px; margin:0 auto 60px; font-size:17px; line-height:1.7; }
+  .hist-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:32px; max-width:1100px; margin:0 auto; }
+  .hist-card {
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.18);
+    border-radius:16px; padding:40px; backdrop-filter:blur(10px);
+  }
+  .hist-card h3 { font-size:22px; font-weight:700; margin-bottom:16px; color:#fff; }
+  .hist-card p { color:rgba(255,255,255,0.92); font-size:15px; line-height:1.65; }
+
+  .reels {
+    background-image:url('assets/img/33LRPdS79FdLM2X1Dr5Zpem53cg.png');
+    background-size:cover; background-position:center;
+    padding:120px 0; color:#fff;
+  }
+  .reels-head { text-align:center; margin-bottom:50px; }
+  .reels-tag { font-size:13px; letter-spacing:0.3em; text-transform:uppercase; color:rgba(255,255,255,0.85); font-weight:600; margin-bottom:12px; }
+  .reels-title { font-size:clamp(36px, 4vw, 60px); font-weight:800; line-height:1.02; }
+  .reels-grid { display:grid; grid-template-columns:repeat(5, 1fr); gap:20px; }
+  .reel-card {
+    aspect-ratio:9/16; border-radius:14px; overflow:hidden; position:relative;
+    box-shadow:0 14px 34px rgba(0,0,0,0.35);
+    cursor:pointer; transition:transform .22s;
+  }
+  .reel-card:hover { transform:translateY(-4px) scale(1.02); }
+  .reel-card img { width:100%; height:100%; object-fit:cover; }
+  .reel-card::after {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.7) 100%);
+  }
+  .reel-card .label {
+    position:absolute; left:16px; right:16px; bottom:18px; z-index:2;
+    color:#fff; font-weight:700; font-size:16px;
+  }
+  .reel-card .desc {
+    position:absolute; left:16px; right:16px; bottom:44px; z-index:2;
+    color:rgba(255,255,255,0.85); font-size:12px; line-height:1.35;
+  }
+
+  @media (max-width:1000px) {
+    .bio-grid { grid-template-columns:1fr; gap:40px; }
+    .hist-grid { grid-template-columns:1fr; }
+    .reels-grid { grid-template-columns:repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <div class="nav">
+    <a href="index.html" class="nav-logo"><img src="assets/img/ltf4tNwkAMAnUiF4GMuskaGMts.png" alt="AEPG"></a>
+    <div class="nav-links">
+      <a href="how-we-create-value.html">How We Create Value</a>
+      <a href="growth-programs.html">Programs</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="founder.html" class="active">Founder</a>
+      <a href="resources.html">Notes</a>
+      <a href="contact.html" class="nav-cta">Book Discovery</a>
+    </div>
+  </div>
+</div>
+
+<section class="page-hero founder">
+  <div class="container">
+    <span class="eyebrow">Who is Aiman El-Ramly</span>
+    <h1>Aiman El-Ramly: Entrepreneur, Strategist, Builder of Enterprises</h1>
+  </div>
+</section>
+
+<section class="founder-bio">
+  <div class="container">
+    <div class="bio-grid">
+      <div class="prose">
+        <p>Aiman El-Ramly has spent more than three decades at the intersection of strategy, innovation, and execution, helping organizations of every size overcome barriers, scale operations, and realize lasting value.</p>
+        <p>He founded AEPG to bring that experience to leaders, boards, investors, and founders who need more than advice, they need a partner who's been in the trenches.</p>
+        <p>From his early role as a founding executive of ZEMA Global Data and ZE Power Engineering, Aiman helped transform these two ambitious family enterprises into highly decorated global leaders. He led brand development, enterprise software scaling, capital transactions, and acquisitions that reshaped entire industries.</p>
+        <p>His success at ZEMA laid the groundwork for building OmniGTM.ai, an innovation platform designed to help organizations accelerate go-to-market strategies with precision.</p>
+        <p>With this unique blend of corporate achievement, nonprofit impact, and global advisory work, Aiman brings credibility across industries. He has worked with the world's largest corporations, partnered with governments, and enabled entrepreneurs and executives alike to scale in the face of complexity.</p>
+        <p>For Aiman, AEPG is the culmination of a career defined by one principle: great enterprises aren't built on theory, they're built through experience. And that's the experience he brings to every leader and team he partners with.</p>
+      </div>
+      <aside class="bio-credentials">
+        <h3>Aiman's Credentials</h3>
+        <ul>
+          <li><strong>BA in Psychology (UBC)</strong>grounding his leadership in human behavior and communication</li>
+          <li><strong>MBA (Royal Roads University)</strong>strengthening his strategic and global management lens</li>
+          <li><strong>Certified Management Consultant (CMC)</strong>a mark of trusted, professional advisory excellence</li>
+          <li><strong>Emily Carr and Langara</strong>studies in creative arts</li>
+          <li><strong>AC Sanford Award Recipient</strong>recognizing his outstanding leadership and contributions to the soccer community and beyond</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="historical">
+  <div class="container">
+    <h2>Historical Contributions</h2>
+    <p class="lead">Aiman is an experienced entrepreneur, board director, and corporate strategist with a proven track record of building, scaling, and transforming businesses. Over the last three decades he has helped many companies pursue their market objectives, most notably the ZE family enterprises.</p>
+    <div class="hist-grid">
+      <div class="hist-card">
+        <h3>At Zema Global Data Corporation</h3>
+        <p>Played a central role in the company's growth from startup venture into a globally recognized leader in energy and commodity data. Led brand development, enterprise software scaling, capital transactions, and acquisitions that reshaped the data analytics industry.</p>
+      </div>
+      <div class="hist-card">
+        <h3>At ZE Power Engineering</h3>
+        <p>As a founding executive, helped transform ZE Power Engineering into a decorated, internationally recognized organization serving the energy sector. Directed strategy, partnerships, and go-to-market execution across North America and beyond.</p>
+      </div>
+      <div class="hist-card">
+        <h3>At OmniGTM.ai</h3>
+        <p>Architect and builder of an innovation platform designed to accelerate go-to-market strategies for complex B2B organizations. A direct application of lessons learned scaling global enterprises.</p>
+      </div>
+      <div class="hist-card">
+        <h3>At AEPG</h3>
+        <p>The culmination of three decades of experience: advisory, coaching, and venture-building services for founders, executives, boards, and institutional investors positioning their organizations for sustainable growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reels">
+  <div class="container">
+    <div class="reels-head">
+      <div class="reels-tag">reels</div>
+      <h2 class="reels-title">Big Impact in Every Frame</h2>
+    </div>
+    <div class="reels-grid">
+      <div class="reel-card">
+        <img src="assets/img/LJ8Xh8EGJJrGwoYSodoIGFB85I.jpg" alt="">
+        <div class="desc">From Muddy Waters to the Rolling Stones, from Ferrari to Dyson, greatness starts with motion.</div>
+        <div class="label">Walking Tall</div>
+      </div>
+      <div class="reel-card">
+        <img src="assets/img/9D5UB8BQdmFV9gmE6LFbehT0OHs.jpg" alt="">
+        <div class="desc">A bold line from Gone with the Wind that marks emotional clarity.</div>
+        <div class="label">Toy Store</div>
+      </div>
+      <div class="reel-card">
+        <img src="assets/img/hxjZ70R300VmFurrBDp5b0NeI9w.jpg" alt="">
+        <div class="desc">Spider-Man teaches us more than heroism, he shows us what real leadership means. Power isn't about glory.</div>
+        <div class="label">Trauma as the Making of Leaders</div>
+      </div>
+      <div class="reel-card">
+        <img src="assets/img/BBz7ldlQL9dkUefaBmwvdOJDOQ.jpg" alt="">
+        <div class="desc">The soccer field teaches a powerful lesson: know when to pass, and when to take the shot.</div>
+        <div class="label">Black Sabbath</div>
+      </div>
+      <div class="reel-card">
+        <img src="assets/img/bvungrsHqMpw4NZQ3ewqh0xw0E.jpg" alt="">
+        <div class="desc">Spider-Man teaches us more than heroism, he shows us what real leadership means.</div>
+        <div class="label">Soccer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-icon"><img src="assets/img/mSYJJRJfcrDdwMvTZkXiZgUXf0.png" alt=""></div>
+    <div class="footer-grid">
+      <div class="footer-brand">Aiman El-Ramly<br>Promotional Group <em>Strategic growth advisory &amp; venture studio</em></div>
+      <nav class="footer-nav">
+        <a href="how-we-create-value.html">How We Create Value</a>
+        <a href="growth-programs.html">Growth Programs</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="founder.html">Founder</a>
+        <a href="resources.html">Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <div class="label">WhatsApp or Call</div>
+        <div class="val"><a href="tel:1-604-760-9015">1-604-760-9015</a></div>
+        <div class="label">Address</div>
+        <div class="val">130 5920 No. Two Road<br>Richmond BC Canada, V7C4R9</div>
+        <div class="label">Email</div>
+        <div class="val"><a href="mailto:info@aepg.ca">info@aepg.ca</a></div>
+        <div class="footer-socials">
+          <a href="#">X</a><a href="#">IG</a><a href="#">f</a><a href="#">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Aiman El-Ramly Promotional Group Inc. All rights reserved.</div>
+      <div><a href="#">Terms</a><a href="#">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

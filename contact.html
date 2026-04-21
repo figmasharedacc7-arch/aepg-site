@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Discovery Intensive — AEPG</title>
+<meta name="description" content="Book a 30-minute Discovery Intensive with Aiman El-Ramly. No slides, no sales pitch. Bring the hardest problem on your board agenda.">
+<link rel="icon" href="assets/img/mSYJJRJfcrDdwMvTZkXiZgUXf0.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+  .contact-hero {
+    position:relative; min-height:56vh; padding:200px 0 100px;
+    display:flex; align-items:center;
+    background-image:url('assets/img/8pvU3bjJtNPO0gStIHdiVJFgjy4.png');
+    background-size:cover; background-position:center;
+    color:#fff;
+  }
+  .contact-hero::before {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(120deg, rgba(11,23,36,0.75), rgba(43,162,219,0.35));
+  }
+  .contact-hero > * { position:relative; z-index:2; }
+  .contact-hero h1 {
+    font-family:var(--font-display); font-weight:400;
+    font-size:clamp(44px, 5.5vw, 78px);
+    line-height:1.02; letter-spacing:-0.02em; max-width:1000px; color:#fff;
+  }
+  .contact-hero h1 em { font-style:italic; color:#FFE2D0; }
+  .contact-hero .eyebrow {
+    display:inline-block; letter-spacing:0.28em; text-transform:uppercase;
+    font-size:12px; font-weight:600; color:rgba(255,255,255,0.88);
+    margin-bottom:22px;
+  }
+
+  .discovery-wrap { background:var(--bg); padding:120px 0; }
+  .discovery-grid {
+    display:grid; grid-template-columns:1.2fr 1fr; gap:70px; align-items:start;
+  }
+
+  .discovery-detail { padding-top:10px; }
+  .discovery-detail h2 {
+    font-size:clamp(32px, 3.8vw, 48px);
+    font-weight:400; margin-bottom:20px;
+  }
+  .discovery-detail h2 em { font-style:italic; color:var(--blue-deep); }
+  .discovery-detail p { font-size:17px; line-height:1.7; color:var(--text-mid); margin-bottom:18px; }
+  .discovery-detail ul { list-style:none; margin:24px 0; }
+  .discovery-detail li {
+    padding-left:30px; position:relative; font-size:16px; line-height:1.6;
+    color:var(--ink); margin-bottom:14px;
+  }
+  .discovery-detail li::before {
+    content:''; position:absolute; left:0; top:10px; width:12px; height:12px;
+    border:2px solid var(--blue-deep); border-radius:50%;
+  }
+  .discovery-detail .expectations {
+    background:var(--bg-warm); border-left:3px solid var(--blue-deep);
+    padding:26px 28px; border-radius:4px; margin-top:30px;
+  }
+  .discovery-detail .expectations h4 {
+    font-family:var(--font-body); font-size:12px;
+    letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-deep);
+    font-weight:700; margin-bottom:10px;
+  }
+  .discovery-detail .expectations p { font-size:15px; color:var(--text-mid); margin:0; }
+
+  .booking-card {
+    background:#fff; border-radius:22px; padding:44px 42px 42px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--border-soft);
+    position:sticky; top:110px;
+  }
+  .booking-card h2 {
+    font-family:var(--font-display); font-size:30px; font-weight:500;
+    color:var(--ink); margin-bottom:6px; letter-spacing:-0.01em;
+  }
+  .booking-card .sub { color:var(--text-mid); font-size:15px; margin-bottom:26px; line-height:1.55; }
+  .booking-actions { display:flex; flex-direction:column; gap:12px; margin-bottom:28px; }
+  .booking-actions .btn-primary { justify-content:center; width:100%; padding:18px; }
+  .booking-actions .btn-dark { justify-content:center; width:100%; background:var(--bg-warm); color:var(--ink); border:1px solid var(--border); padding:16px; font-weight:500; }
+  .booking-actions .btn-dark:hover { background:var(--border-soft); color:var(--blue-deep); }
+
+  .or-divider {
+    text-align:center; font-size:12px; letter-spacing:0.2em;
+    text-transform:uppercase; color:var(--text-muted); font-weight:600;
+    margin:0 0 22px; position:relative;
+  }
+  .or-divider::before, .or-divider::after {
+    content:''; position:absolute; top:50%; width:40%; height:1px;
+    background:var(--border-soft);
+  }
+  .or-divider::before { left:0; }
+  .or-divider::after { right:0; }
+
+  .form-card { }
+  .form-card .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px; }
+  .form-card .form-field { display:flex; flex-direction:column; gap:6px; }
+  .form-card .form-field label {
+    font-size:11px; letter-spacing:0.15em; text-transform:uppercase;
+    color:var(--blue-deep); font-weight:700;
+  }
+  .form-card input, .form-card textarea {
+    background:var(--bg-warm); border:1px solid var(--border-soft);
+    padding:12px 14px; color:var(--ink); font-size:15px; font-family:inherit;
+    outline:none; border-radius:8px; transition:border-color .2s, background .2s;
+  }
+  .form-card textarea { resize:vertical; min-height:110px; }
+  .form-card input:focus, .form-card textarea:focus {
+    border-color:var(--blue-deep); background:#fff;
+  }
+  .form-card input::placeholder, .form-card textarea::placeholder { color:var(--text-muted); }
+  .form-submit {
+    width:100%; background:var(--ink); color:#fff; border:none;
+    padding:16px; border-radius:10px; font-size:15px; font-weight:500; cursor:pointer;
+    margin-top:8px; transition:background .2s;
+  }
+  .form-submit:hover { background:var(--blue-deep); }
+
+  @media (max-width:1000px) {
+    .discovery-grid { grid-template-columns:1fr; }
+    .booking-card { position:static; }
+    .form-card .form-row { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-wrap">
+  <div class="nav">
+    <a href="index.html" class="nav-logo"><img src="assets/img/ltf4tNwkAMAnUiF4GMuskaGMts.png" alt="AEPG"></a>
+    <div class="nav-links">
+      <a href="how-we-create-value.html">How We Create Value</a>
+      <a href="growth-programs.html">Programs</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="founder.html">Founder</a>
+      <a href="resources.html">Notes</a>
+      <a href="contact.html" class="nav-cta">Book Discovery</a>
+    </div>
+  </div>
+</div>
+
+<section class="contact-hero">
+  <div class="container">
+    <span class="eyebrow">Let's talk</span>
+    <h1>Bring us the hardest problem <em>on your board agenda.</em></h1>
+  </div>
+</section>
+
+<section class="discovery-wrap">
+  <div class="container">
+    <div class="discovery-grid">
+
+      <div class="discovery-detail">
+        <span class="section-eyebrow">Discovery Intensive</span>
+        <h2>A <em>30-minute conversation</em> worth more than most pitch decks.</h2>
+        <p>Thirty minutes, senior partner, no slides. Most Discovery conversations start the same way: a founder, CEO, or board chair describes the thing keeping them up. We ask the two or three questions that usually sharpen the picture, and by minute twenty-five we are sketching the outlines of an answer.</p>
+        <p>If it is a fit for a deeper engagement, we will say so and propose a path. If it is not, you leave with a useful perspective and no pressure.</p>
+        <ul>
+          <li>Prep: a short email exchange so we come in with context, not cold.</li>
+          <li>Call: 30 minutes, video or phone, senior partner only.</li>
+          <li>Follow-up: a one-page summary of what we heard and what we would do next.</li>
+        </ul>
+        <div class="expectations">
+          <h4>What we will not do</h4>
+          <p>No prepared decks, no sales sequence, no "let me loop in my colleague." If we are the wrong fit we will tell you, and usually we know someone who is the right fit.</p>
+        </div>
+      </div>
+
+      <aside class="booking-card">
+        <h2>Book your call</h2>
+        <p class="sub">Pick the channel that suits you. Most calls happen within a week of first contact.</p>
+        <div class="booking-actions">
+          <a href="mailto:info@aepg.ca?subject=Discovery%20Intensive%20Request" class="btn-primary">Request a Discovery Call</a>
+          <a href="tel:1-604-760-9015" class="btn-dark">Call 1-604-760-9015</a>
+          <a href="https://wa.me/16047609015" class="btn-dark">WhatsApp us</a>
+        </div>
+
+        <div class="or-divider">Or send a note</div>
+
+        <div class="form-card">
+          <form onsubmit="event.preventDefault(); this.querySelector('.form-submit').textContent='Thanks, we will be in touch within one business day.'; this.querySelector('.form-submit').disabled=true;">
+            <div class="form-row">
+              <div class="form-field">
+                <label>Full Name</label>
+                <input type="text" placeholder="Jane Doe" required>
+              </div>
+              <div class="form-field">
+                <label>Company</label>
+                <input type="text" placeholder="Acme Inc.">
+              </div>
+            </div>
+            <div class="form-field" style="margin-bottom:14px;">
+              <label>Email</label>
+              <input type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-field" style="margin-bottom:14px;">
+              <label>What you are working on</label>
+              <textarea placeholder="A sentence or two on the current situation and where you think AEPG could help." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-icon"><img src="assets/img/mSYJJRJfcrDdwMvTZkXiZgUXf0.png" alt=""></div>
+    <div class="footer-grid">
+      <div class="footer-brand">Aiman El-Ramly<br>Promotional Group <em>Strategic growth advisory &amp; venture studio</em></div>
+      <nav class="footer-nav">
+        <a href="how-we-create-value.html">How We Create Value</a>
+        <a href="growth-programs.html">Growth Programs</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="founder.html">Founder</a>
+        <a href="resources.html">Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <div class="label">WhatsApp or Call</div>
+        <div class="val"><a href="tel:1-604-760-9015">1-604-760-9015</a></div>
+        <div class="label">Address</div>
+        <div class="val">130 5920 No. Two Road<br>Richmond BC Canada, V7C4R9</div>
+        <div class="label">Email</div>
+        <div class="val"><a href="mailto:info@aepg.ca">info@aepg.ca</a></div>
+        <div class="footer-socials">
+          <a href="#">X</a><a href="#">IG</a><a href="#">f</a><a href="#">in</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Aiman El-Ramly Promotional Group Inc. All rights reserved.</div>
+      <div><a href="#">Terms</a><a href="#">Privacy</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
